@@ -56,11 +56,39 @@ During the generation, many files are generated:
 
 ## how to experiment
 
-By playing with the "Experiment" initialization, you can drive various experiments:
+By tuning the `Experiment` initialization, you can drive various experiments.
 
-By tuning the `agents_to_observe` list, you can monitor what happens for other individual agents. 
+```python
+Experiment(
+            agents_count=100,
+            duration=200, 
+            law=Norm(
+                        "90kmh", 
+                        { a:{"points":{-3}} if a>90 else {} for a in current_model.actions},
+                        { a: ({"points":{-3}} if a>95 else {"points":{0}} ) for a in current_model.actions}
+                        ),
+            inform_law_step=10,
+            campain_application=[(50,100,0.3) ], #, (200,300,0.1)
+            campains_information=[],#[(20,50,0.1, { a:{"hedonism":{0}} if a>100 else {} for a in current_model.actions})],
+            count_interactions_observation=0, 
+            count_interaction_social_coercition=5, 
+            count_interaction_small_talk=0,
+            agents_to_observe={"agent1","agent2"}
+            ).run()
+```
 
+* Tune `agents_count` to change the count of simulated agents
+* Tune `duration` to change the duration of the simulation
+* Tune `inform_law_step` to change when the law is transmitted into the populatiopn
+* Tune `campain_application` to define no, one or several campains of application of the norm; each campain is defined by timestep of begin, end and probability of control `(50,100,0.3)` 
+* Tune `campains_information` to define no, one or several campains of information of the norm; each campain is defined by timestep of begin, end, the probability of control and the message sent to agents
+* Tune `count_interactions_observation` to define how many agents each agent is observing at each timestep
+* Tune `count_interactions_social_coercition` to define how many agents each agent is observing and possibly sanctionning at each timestep
+* Tune `count_interactions_small_talk` to define how many agents each agent is discussing with at each timestep
+* Tune the `agents_to_observe` list to monitor what happens for other individual agents. 
 
+You can also:
+* to enable replicability of the experiments (i.e. they always give the same results), comment the `random.seed()` or define a specific seed, such as `random.seed(5)` 
 
 # how to plot results
 

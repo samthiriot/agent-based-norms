@@ -6,6 +6,8 @@ import random
 import time
 import math
 
+## uncomment to obtain a different stochastic simulation (or set up a seed and reuse it for replicability) 
+random.seed()
 
 class Model():
 
