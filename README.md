@@ -1,6 +1,9 @@
 # agent-based-norms
 
-A model that describes the behaviour of individuals under the pressure of institutional and social norms.
+The implementation of a model that describes the behaviour of individuals under the pressure of institutional and social norms.
+It is provided to enable the replication of experiments described in academic publications.
+
+Provided "as is" without express or implied warrant.
 
 # prerequires
 
