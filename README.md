@@ -36,7 +36,7 @@ $ python ../model/model.py  &> simulation.log &
 [2] 27165
 ```
 
-This will run the simulation, and write the simulation results into the file simulation.log .
+This will run the simulation, and write the simulation results into the file `simulation.log` .
 
 The simulation takes time (~2 to 5 minutes for 100 agents and 200 time steps on a standard computer). 
 
@@ -61,7 +61,7 @@ By tuning the `agents_to_observe` list, you can monitor what happens for other i
 
 # how to plot results
 
-All these command lines assume you are in the directory <repository_root>/<experiment_directory>/
+All these command lines assume you are in the directory `<repository_root>/<experiment_directory>/`
 
 
 ## plot the graph of the behaviours of the entire population
@@ -72,7 +72,7 @@ press a key to close
 
 generating the graph
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_count_heatmap_1.pdf'.
+==> 1 page written on 'plot_count_heatmap_1.pdf'.
 
 ```
 
@@ -90,22 +90,22 @@ press a key to shift to the next graph...
 
 writing the eps and pdf versions of the graph...
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_1_utility_aggregated.pdf'.
+==> 1 page written on 'plot_1_utility_aggregated.pdf'.
 press a key to shift to the next graph...
 
 writing the eps and pdf versions of the graph...
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_1_utility_points.pdf'.
+==> 1 page written on 'plot_1_utility_points.pdf'.
 press a key to shift to the next graph...
 
 writing the eps and pdf versions of the graph...
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_1_utility_social_sanction.pdf'.
+==> 1 page written on 'plot_1_utility_social_sanction.pdf'.
 press a key to shift to the next graph...
 
 writing the eps and pdf versions of the graph...
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_1_utility_hedonism.pdf'.
+==> 1 page written on 'plot_1_utility_hedonism.pdf'.
 
 ```
 
@@ -124,7 +124,7 @@ To generate the combined graph, type in
 ```bash
 $ gnuplot ../plotting/plot_agent_heatmaps_multi.gnuplot 
 PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
-==> 1 page written on `plot_agent1_utilities.pdf'.
+==> 1 page written on 'plot_agent1_utilities.pdf'.
 ```
 It should generate:
 * an eps file into `plot_agent1_utilities.eps`
