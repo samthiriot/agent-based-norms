@@ -56,7 +56,7 @@ During the generation, many files are generated:
 
 ## how to experiment
 
-By tuning the `Experiment` initialization, you can drive various experiments.
+By tuning the `Experiment` initialization in the `model/model.py` file, you can drive various experiments.
 
 ```python
 Experiment(
